@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&family=Macondo&display=swap');
+
+:root {
+  --gradient: linear-gradient(to right, rgb(56, 63, 65) -50%, rgb(39, 24, 39) 150%);
+  --gradient_1:rgb(166,250,255);
+  --gradient_2:rgb(182,0,0);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  background-image: url(https://sun7-7.userapi.com/s/v1/if2/KppWDHe0VMmkvu8J7Khnoy_wvOPgKDVp7rvXRFsG0M2f5QfuyrCag-ISWnIuOwaMoGhghxWGwQ7DQtGuvpm5R7hi.jpg?size=1920x1080&quality=95&type=album);
+  color: #fff;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.timer {
+  /* background: var(--gradient); */
+  padding: 32px;
+  border-radius: 16px;
+}
+.timer__title {
+  font-size: 48px;
+  font-family: 'Macondo', cursive;
+  text-transform: uppercase;
+}
+
+.timer__box {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+.timer__item {
+  width: 95px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+.timer__item:not(:last-child) {
+  margin-right: 16px;
+}
+.timer__circle {
+  --size: 70px;
+  width: var(--size);
+  height: var(--size);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.timer__num {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1em;
+  /* background: linear-gradient(-125deg,var(--gradient_1),var(--gradient_2));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  position: relative;
+}
+.timer__name {
+  font-weight: 300px;
+  margin-top: 16px;
+}
+
+/* Circle */
+.circle {
+  --offset: -10px;
+  position: absolute;
+  top: var(--offset);
+  right: var(--offset);
+  bottom: var(--offset);
+  left: var(--offset);
+  transform: rotate(-90deg);
+}
+.segment {
+  fill: rgba(0, 0, 0, 0.3);
+  stroke: url(#gradient);
+  stroke-width: 0.8px;
+  stroke-dasharray: 60 60;
+  stroke-linecap: round;
+  transform: scale(4.7);
+  transform-origin: center;
+  transition: stroke-dasharray 1s linear;
+}
+
+.gradient_1 {
+  stop-color:var(--gradient_1);
+}
+.gradient_2 {
+  stop-color:var(--gradient_2);
+}
